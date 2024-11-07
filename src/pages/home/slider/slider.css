@@ -1,0 +1,28 @@
+.slide-track {
+    width:100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+    animation:scroll 100s linear infinite;
+  }
+  
+  .slider {
+   height: 100px;
+   margin: auto;
+   overflow: hidden;
+   position: relative;
+   width: auto;
+
+  }
+
+   .slider .slide{
+    height: 100px;
+    width: 250px;
+   }
+   
+  
+  
+  @keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(calc(-250px * 7))}
+  }

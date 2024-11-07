@@ -74,6 +74,7 @@ import { useState } from "react"; // Import useState here
 import { motion } from "framer-motion";
 import "./header/header.css"; // Ensure this is included
 import { Menus } from "../../src/utils"; // Keep as is
+import { HiMenu, HiX } from 'react-icons/hi';
 
 export default function MobMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,12 +95,20 @@ export default function MobMenu() {
       overflow: "hidden",
     },
   };
-
+  
   return (
     <div>
+      {/* <button className="menu-button lg:hidden" onClick={toggleDrawer}>
+        {isOpen ? "Close Menu" : "Open Menu"} 
+      </button> */}
       <button className="menu-button lg:hidden" onClick={toggleDrawer}>
-        {isOpen ? "Close Menu" : "Open Menu"} {/* Text instead of icons */}
-      </button>
+      {isOpen ? (
+        <HiX className="w-6 h-6" /> // Close icon
+      ) : (
+        <HiMenu className="w-6 h-6" /> // Hamburger icon
+      )}
+    </button>
+      
 
       <motion.div
         className={`menu-drawer ${isOpen ? 'open' : ''}`}

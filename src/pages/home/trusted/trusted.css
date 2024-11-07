@@ -1,0 +1,32 @@
+.trusted{
+    align-items: center;
+}
+.start {
+    position: relative; /* Make sure it has a stacking context */
+    z-index: 10; /* Ensure the a tag is above the slider */
+  }
+  
+  .start a {
+    z-index: 10; 
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    color: #4F5C68;
+    border-radius: 999px;
+    opacity: 1;
+    padding: 10px;
+    z-index: 10; 
+  }
+  
+.start a img{
+    width: 20px;
+}
+.slide img {
+    width: 80%;
+    height: 70%;
+   
+  }
+  
+ 
